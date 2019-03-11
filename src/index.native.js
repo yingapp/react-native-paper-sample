@@ -44,8 +44,6 @@ const RootStack = createDrawerNavigator(
         drawerPosition:
             Platform.OS === 'android' && I18nManager.isRTL ? 'right' : 'left',
         drawerWidth: 350,
-        overlayColor: 'transparent',
-        statusBarBackgroundColor: 'white',
     }
 );
 
