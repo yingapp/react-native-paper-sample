@@ -43,6 +43,9 @@ const RootStack = createDrawerNavigator(
         // set drawerPosition to support rtl toggle on android
         drawerPosition:
             Platform.OS === 'android' && I18nManager.isRTL ? 'right' : 'left',
+        drawerWidth: 350,
+        overlayColor: 'transparent',
+        statusBarBackgroundColor: 'white',
     }
 );
 
@@ -54,7 +57,6 @@ export default class PaperExample extends React.Component<{}, State> {
     };
 
     async componentDidMount() {
-        StatusBar.setBackgroundColor('#0000a0')
         StatusBar.setBarStyle('light-content');
 
         try {
@@ -72,6 +74,9 @@ export default class PaperExample extends React.Component<{}, State> {
         } catch (e) {
             // ignore error
         }
+
+        StatusBar.setBackgroundColor(this.state.theme.colors.primary);
+
     }
 
     _savePreferences = async () => {
@@ -86,6 +91,8 @@ export default class PaperExample extends React.Component<{}, State> {
         } catch (e) {
             // ignore error
         }
+        StatusBar.setBackgroundColor(this.state.theme.colors.primary);
+
     };
 
     _toggleTheme = () =>
