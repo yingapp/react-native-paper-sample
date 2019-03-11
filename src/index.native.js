@@ -54,6 +54,7 @@ export default class PaperExample extends React.Component<{}, State> {
     };
 
     async componentDidMount() {
+        StatusBar.setBackgroundColor('#0000a0')
         StatusBar.setBarStyle('light-content');
 
         try {

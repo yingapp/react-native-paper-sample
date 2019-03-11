@@ -22,7 +22,7 @@ type State = {
 };
 
 class BadgeExample extends React.Component<Props, State> {
-  static title = 'Badge';
+  static title = '角标';
 
   state = {
     visible: true,
