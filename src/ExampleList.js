@@ -32,6 +32,7 @@ import TextExample from './Examples/TextExample';
 import TextInputExample from './Examples/TextInputExample';
 import ToggleButtonExample from './Examples/ToggleButtonExample';
 import TouchableRippleExample from './Examples/TouchableRippleExample';
+import WebViewExample from './Examples/WebViewExample';
 
 type Props = {
   theme: Theme,
@@ -67,6 +68,7 @@ export const examples = {
   textInput: TextInputExample,
   toggleButton: ToggleButtonExample,
   touchableRipple: TouchableRippleExample,
+  webview:WebViewExample
 };
 
 const data = Object.keys(examples).map(id => ({ id, data: examples[id] }));
